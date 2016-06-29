@@ -55,7 +55,7 @@ h4{
 p{
     color: $base-principal-color;
     line-height: 25px;
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 0 2px black;
 }
 
 a{
@@ -96,7 +96,7 @@ a:hover{
     float: right;;
     margin: 100px 50px 70px 0;
     border-radius: 50%;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px grey;
 }
 
 .developer {
@@ -134,7 +134,10 @@ a:hover{
 
 .bg-education{
       background: url(../images/bg-01.jpg) fixed;
+}
 
+.bg-bottom{
+  background: url(../images/bg-new.jpg) fixed;
 }
 .educacion{
     padding: 100px 50px;
