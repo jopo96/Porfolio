@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(https://fonts.googleapis.com/css?family=Mada:400,900);
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background: url(../images/bg-01.jpg) fixed; }
+
+img {
+  max-width: 100%; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+figure {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 i {
+  color: white;
+  font-family: Mada;
+  text-shadow: 2px 2px 4px black; }
+
+h1 {
+  font-size: 50px; }
+
+h2 {
+  font-size: 35px;
+  padding-bottom: 40px; }
+
+h3 {
+  font-size: 30px; }
+
+h4 {
+  font-size: 25px; }
+
+p {
+  color: white;
+  line-height: 25px;
+  text-shadow: 0 0 1px black; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+a:hover {
+  color: rgba(255, 96, 19, 0.8); }
+
+.cleaner {
+  clear: both; }
+
+.main-header {
+  background-color: rgba(191, 191, 191, 0.5); }
+
+.top-left {
+  float: left;
+  margin: 70px 0 70px 50px;
+  line-height: 15px;
+  text-decoration: none; }
+  .top-left h3 {
+    text-indent: 50px; }
+  .top-left a {
+    margin: 10px; }
+  .top-left li {
+    float: right;
+    padding-right: 20px; }
+
+.top-right {
+  float: right;
+  margin: 100px 50px 70px 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black; }
+
+.developer {
+  color: rgba(255, 96, 19, 0.8);
+  font-size: 60px;
+  font-family: Quicksand;
+  font-weight: 400;
+  text-shadow: none; }
+
+.sobre-mi {
+  padding: 100px 50px; }
+  .sobre-mi p {
+    text-align: justify; }
+
+.bg-skills {
+  background-color: rgba(191, 191, 191, 0.5); }
+
+.skills {
+  padding: 100px 50px; }
+  .skills i {
+    color: white; }
+  .skills div {
+    padding-top: 10px;
+    width: 25%;
+    float: left;
+    margin-bottom: 100px;
+    text-align: center; }
+
+.bg-education {
+  background: url(../images/bg-code.jpg) fixed; }
+
+.educacion {
+  padding: 100px 50px; }
+  .educacion h4 {
+    padding-left: 30px; }
+  .educacion img {
+    float: left;
+    position: relative;
+    top: 10px; }
+  .educacion p {
+    padding-left: 60px; }
+
+.footer {
+  background-color: rgba(191, 191, 191, 0.5);
+  padding: 100px 50px; }
+
+.formulario {
+  width: 100%; }
+
+#left {
+  width: 50%;
+  float: left; }
+  #left input {
+    margin: 0 2.5% 15px 2.5%;
+    border: solid 1px grey;
+    width: 95%;
+    height: 50px;
+    font-size: 13px;
+    font-family: inherit;
+    border-radius: 5px;
+    padding-left: 10px; }
+
+#right {
+  width: 50%;
+  float: right; }
+  #right input {
+    margin: 0 2.5% 15px 2.5%;
+    width: 95%;
+    height: 115px;
+    font-size: 13px;
+    font-family: inherit;
+    border-radius: 5px;
+    padding-left: 10px; }
+
+#contenedor-button {
+  text-align: center; }
+
+.button-form {
+  border: none;
+  background-color: rgba(255, 96, 19, 0.8);
+  width: 20%;
+  height: 40px;
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  text-transform: uppercase; }
+
+.fa-arrow-circle-up {
+  float: right; }
+
+@media (max-width: 1000px) {
+  .skills div {
+    width: 50%; } }
+@media (max-width: 750px) {
+  .top-right {
+    display: none; } }
+@media (max-width: 500px) {
+  .skills div {
+    width: 100%;
+    margin: 0px 0 30px 0; }
+
+  h1 {
+    font-size: 30px; }
+
+  h2 {
+    font-size: 20px; }
+
+  .sobre-mi, .skills, .educacion {
+    padding: 30px 15px; }
+
+  .footer {
+    padding: 30px 15px 70px 15px; }
+    .footer .fa-arrow-circle-up {
+      font-size: 45px; }
+
+  .top-left {
+    float: none;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+    padding: 40px 0 50px 0; }
+    .top-left hr {
+      width: 90%; }
+    .top-left h3 {
+      text-indent: 15px;
+      font-size: 18px; }
+
+  p {
+    font-size: 14px; }
+
+  h4 {
+    font-size: 16px; }
+
+  #left {
+    width: 100%;
+    float: none; }
+
+  #right {
+    width: 100%;
+    float: none; }
+
+  .button-form {
+    font-size: 12px; }
+
+  .top-left ul li {
+    border: solid 1px green;
+    float: none;
+    text-align: center; } }
+
+/*# sourceMappingURL=styles.css.map */
