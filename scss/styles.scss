@@ -3,7 +3,7 @@
 
 $base-principal-color: rgb(255, 255, 255);
 $base-secondary-color: rgba(255, 96, 19, 0.8);
-$base-background: rgba(191, 191, 191, 0.5);
+$base-background: rgba(191, 191, 191, 0.2);
 $base-text-shadow: 2px 2px 4px black;
 * {
     box-sizing: border-box;
@@ -12,7 +12,7 @@ $base-text-shadow: 2px 2px 4px black;
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
-    background: url(../images/bg-01.jpg) fixed;
+    background: url(../images/bg-code5.jpg) fixed;
 }
 
 img {
@@ -31,12 +31,12 @@ figure {
 
 h1, h2, h3, h4, h5, h6 i{
     color: $base-principal-color;
-    font-family: Mada;
+    font-family: Quicksand;
     text-shadow: $base-text-shadow;
 }
 
 h1{
-    font-size: 50px;
+    font-size: 45px;
 }
 
 h2{
@@ -133,7 +133,7 @@ a:hover{
 }
 
 .bg-education{
-      background: url(../images/bg-code.jpg) fixed;
+      background: url(../images/bg-01.jpg) fixed;
 
 }
 .educacion{
@@ -216,7 +216,7 @@ a:hover{
     }
 }
 
-@media(max-width:800px){
+@media(max-width:870px){
     .top-right{
       display: none;
     }

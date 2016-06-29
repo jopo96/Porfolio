@@ -6,7 +6,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background: url(../images/bg-01.jpg) fixed; }
+  background: url(../images/bg-code5.jpg) fixed; }
 
 img {
   max-width: 100%; }
@@ -21,11 +21,11 @@ figure {
 
 h1, h2, h3, h4, h5, h6 i {
   color: white;
-  font-family: Mada;
+  font-family: Quicksand;
   text-shadow: 2px 2px 4px black; }
 
 h1 {
-  font-size: 50px; }
+  font-size: 45px; }
 
 h2 {
   font-size: 35px;
@@ -53,7 +53,7 @@ a:hover {
   clear: both; }
 
 .main-header {
-  background-color: rgba(191, 191, 191, 0.5); }
+  background-color: rgba(191, 191, 191, 0.2); }
 
 .top-left {
   float: left;
@@ -87,7 +87,7 @@ a:hover {
     text-align: justify; }
 
 .bg-skills {
-  background-color: rgba(191, 191, 191, 0.5); }
+  background-color: rgba(191, 191, 191, 0.2); }
 
 .skills {
   padding: 100px 50px; }
@@ -101,7 +101,7 @@ a:hover {
     text-align: center; }
 
 .bg-education {
-  background: url(../images/bg-code.jpg) fixed; }
+  background: url(../images/bg-01.jpg) fixed; }
 
 .educacion {
   padding: 100px 50px; }
@@ -115,7 +115,7 @@ a:hover {
     padding-left: 60px; }
 
 .footer {
-  background-color: rgba(191, 191, 191, 0.5);
+  background-color: rgba(191, 191, 191, 0.2);
   padding: 100px 50px; }
 
 .formulario {
@@ -165,7 +165,7 @@ a:hover {
 @media (max-width: 1000px) {
   .skills div {
     width: 50%; } }
-@media (max-width: 800px) {
+@media (max-width: 870px) {
   .top-right {
     display: none; } }
 @media (max-width: 500px) {
