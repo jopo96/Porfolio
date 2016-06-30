@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(normalize.css);
 
+
 $base-principal-color: rgb(255, 255, 255);
 $base-secondary-color: rgba(255, 96, 19, 0.8);
 $base-background: rgba(191, 191, 191, 0.2);
@@ -23,7 +24,7 @@ $base-text-shadow: 2px 2px 4px black;
 	}
 }
 
-* {
+*	{
     box-sizing: border-box;
 }
 
