@@ -1,10 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(https://fonts.googleapis.com/css?family=Mada:400,900);
 
+
 $base-principal-color: rgb(255, 255, 255);
 $base-secondary-color: rgba(255, 96, 19, 0.8);
 $base-background: rgba(191, 191, 191, 0.2);
 $base-text-shadow: 2px 2px 4px black;
+
+
+@mixin formulario {
+    width: 50%;
+    float: left;
+      input{
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        border: solid 1px grey;
+        width: 95%;
+        height: 70px;
+        font-family: inherit;
+        border-radius: 5px;
+        padding-left: 10px;
+  }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,8 +31,7 @@ $base-text-shadow: 2px 2px 4px black;
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
-    background: url(../images/bg-code5.jpg) fixed;
-}
+  }
 
 img {
     max-width: 100%;
@@ -31,7 +49,6 @@ figure {
 
 h1, h2, h3, h4, h5, h6 i{
     color: $base-principal-color;
-    font-family: Quicksand;
     text-shadow: $base-text-shadow;
 }
 
@@ -58,6 +75,11 @@ p{
     text-shadow: 0 0 2px black;
 }
 
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -71,13 +93,18 @@ a:hover{
     clear: both;
 }
 
+.bg-top{
+ background: url(../images/bg-01.jpg)  center top no-repeat fixed;
+ background-size: cover;
+}
+
 .main-header{
-    background-color: $base-background;
+    background-color: $base-background ;
 }
 
 .top-left{
     float: left;
-    margin: 70px 0 70px 50px;
+    padding: 100px 0;
     line-height: 15px;
     text-decoration: none;
         h3{
@@ -93,8 +120,8 @@ a:hover{
 }
 
 .top-right{
-    float: right;;
-    margin: 100px 50px 70px 0;
+    float: right;
+    margin: 100px 20px ;
     border-radius: 50%;
     box-shadow: 0 0 10px grey;
 }
@@ -102,45 +129,36 @@ a:hover{
 .developer {
     color: $base-secondary-color;
     font-size: 60px;
-    font-family: Quicksand;
     font-weight: 400;
     text-shadow: none;
 }
 
 .sobre-mi{
-    padding: 100px 50px;
+  margin: auto;
+    padding: 100px 0px;
         p{
     text-align: justify;
     }
 }
 
-.bg-skills{
-    background-color: $base-background;
+.bg-center{
+ background: url(../images/bg-02.jpg)  center top no-repeat fixed;
+ background-size: cover;
 }
 
 .skills{
-    padding: 100px 50px;
-        i{
-    color: $base-principal-color
-    }
-        div{
-    padding-top: 10px;
+    background-color: $base-background;
+    padding: 100px 0px;
+    margin: auto;
+        .logos{
     width: 25%;
     float: left;
-    margin-bottom: 100px;
     text-align: center;
     }
 }
 
-.bg-education{
-      background: url(../images/bg-01.jpg) fixed;
-}
-
-.bg-bottom{
-  background: url(../images/bg-new.jpg) fixed;
-}
 .educacion{
-    padding: 100px 50px;
+    padding: 100px 0px;
         h4{
     padding-left: 30px;
     }
@@ -154,140 +172,173 @@ a:hover{
   }
 }
 
+.bg-bottom{
+  background: url(../images/bg-03.jpg)  center top no-repeat fixed;
+  background-size: cover;
+}
+
 .footer{
-      background-color: $base-background;  padding: 100px 50px;
+      background-color: $base-background;
+      padding: 100px 0px;
 }
 
 .formulario{
       width: 100%;
 }
 
-#left{
-    width: 50%;
-    float: left;
-      input{
-    margin: 0 2.5% 15px 2.5%;
-    border: solid 1px grey;
-    width: 95%;
-    height: 50px;
-    font-size: 13px;
-    font-family: inherit;
-    border-radius: 5px;
-    padding-left: 10px;
-  }
+#left{ @include formulario }
+
+
+#right{ @include formulario;
+  input{
+      height: 160px;
+      padding-bottom: 85px;
+    }
 }
 
-#right{
-    width: 50%;
-    float: right;
-      input{
-    margin: 0 2.5% 15px 2.5%;
-    width: 95%;
-    height: 115px;
-    font-size: 13px;
-    font-family: inherit;
-    border-radius: 5px;
-    padding-left: 10px;
-  }
-}
-
-#contenedor-button{
-    text-align: center;
-}
-
-.button-form{
+.formulario button{
+  display: block;
+  margin: auto;
     border: none;
     background-color: $base-secondary-color;
     width: 20%;
-    height: 40px;
+    height: 50px;
     color: $base-principal-color;
     font-family: inherit;
     font-size: 16px;
     text-transform: uppercase;
 }
 
-.fa-arrow-circle-up{
-    float: right;
-}
+.footer a{
+    display: block;
+  text-align: right;}
 
 // ************************* //
 ////////// RESPONSIVE ////////
+// -------------------------//
+
+
+@media (max-width:1250px){
+
+      .container{
+      width: 95%;
+    }
+  }
+
 
 @media (max-width:1000px){
-    .skills div{
+    .skills{
+    .logos{
       width: 50%;
+      padding: 10px;
+    }
     }
 }
 
-@media(max-width:870px){
+@media(max-width:800px){
     .top-right{
       display: none;
     }
 }
 
-@media(max-width:500px){
-    .skills div{
-      width: 100%;
-      margin: 0px 0 30px 0;
+@media(max-width:600px){
+  .skills{
+  .logos{
+    width: 100%;
   }
-    h1{
-      font-size: 30px;
-  }
-    h2{
-      font-size: 20px;
-  }
+}
 
-    .sobre-mi, .skills, .educacion, {
-      padding: 30px 15px;
-  }
-
-    .footer{
-      padding: 30px 15px 70px 15px;
-
-    .fa-arrow-circle-up{
-        font-size: 45px;
-      }
-  }
-
-  .top-left{
-    float: none;
-    text-align: center;
-    margin: 0px 5px 0px 5px;
-    padding: 40px 0 50px 0;
-    hr{
-    width: 90%;
-    }
-     h3{
-    text-indent: 15px;
-    font-size: 18px;
-    }
-  }
-
-  p{
-    font-size: 14px;
-  }
-
-  h4{
-    font-size: 16px;
+    .top-left, .sobre-mi, .skills, .educacion, .footer{
+      padding: 50px 0px;
   }
 
   #left{
-    width: 100%;
     float: none;
+    width: auto;
+
 
   }
   #right{
-    width: 100%;
     float: none;
+    width: auto;
   }
+}
 
-  .button-form{
-    font-size: 12px;
-  }
 
-  .top-left ul li{
-    border: solid 1px green;
-    float: none;
-    text-align: center;
-  }
+@media (max-width:500px) {
+
+  .top-left{
+      float: none;
+      text-align: center;
+
+      hr{
+      width: 90%;
+      }
+      h3{
+          text-indent: 0;
+          font-size: 20px;
+          }
+    }
+        h1{
+          font-size: 35px;
+      }
+        h2{
+          font-size: 25px;
+          text-align: center;
+      }
+       h4{
+        font-size: 18px;
+      }
+
+      .educacion{
+          h4{
+          padding-left: 60px;
+          }
+        }
+
+      p{
+        font-size: 14px;
+      }
+
+    .footer a{
+      text-align: center;
+      padding-top: 30px;
+    }
+}
+
+@media (max-width:350px) {
+
+  .top-left h3{
+          font-size: 15px;
+          }
+
+          h1{
+            font-size: 28px;
+          }
+
+          h2{
+            font-size: 20px;
+            text-align: center;
+          }
+
+          h4{
+          font-size: 15px;
+          }
+
+          p{
+            font-size: 11px;
+          }
+
+          .formulario button{
+              height: 40px;
+              font-size: 12px;
+          }
+
+          .footer a{
+            font-size: 10px;
+          }
+
+          .top-left, .sobre-mi, .skills, .educacion, .footer{
+            padding: 30px 0px;
+        }
 }
