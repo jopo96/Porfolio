@@ -61,7 +61,7 @@ a {
   background-color: rgba(191, 191, 191, 0.2); }
 
 .bg-nav-fondo {
-  background-color: rgba(202, 211, 176, 0.7);
+  background-color: white;
   height: 40px;
   width: 100%;
   z-index: 50; }
@@ -73,13 +73,11 @@ a {
   width: 100%;
   position: fixed;
   top: 0px;
-  z-index: 50; }
+  z-index: 60; }
 
 .top-nav {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  z-index: 100; }
+  float: right;
+  margin-top: 12px; }
   .top-nav li {
     float: left;
     padding: 0 0px;
@@ -89,7 +87,9 @@ a {
       color: white;
       padding: 5px 10px; }
       .top-nav li a:hover {
-        background-color: rgba(255, 96, 19, 0.8); }
+        background-color: rgba(255, 96, 19, 0.8);
+        transition: background-color 400ms;
+        -webkit-transition: background-color 400ms; }
 
 .top-left {
   float: left;
@@ -160,7 +160,7 @@ a {
 #left {
   width: 50%;
   float: left; }
-  #left input {
+  #left input, #left textarea {
     display: block;
     margin: auto;
     margin-bottom: 20px;
@@ -174,7 +174,7 @@ a {
 #right {
   width: 50%;
   float: left; }
-  #right input {
+  #right input, #right textarea {
     display: block;
     margin: auto;
     margin-bottom: 20px;
@@ -184,17 +184,17 @@ a {
     font-family: inherit;
     border-radius: 5px;
     padding-left: 10px; }
-  #right input {
+  #right textarea {
     height: 160px;
-    padding-bottom: 85px; }
+    padding-top: 25px; }
 
 .formulario button {
   border: none;
-  border-bottom: 4px solid  #ff8533 !important;
+  border-bottom: 4px solid rgba(255, 96, 19, 0.8) !important;
   display: block;
   margin: auto;
   border: none;
-  background-color: rgba(255, 96, 19, 0.8);
+  background-color: #ff8533;
   width: 20%;
   height: 50px;
   color: white;
@@ -203,11 +203,13 @@ a {
   text-transform: uppercase;
   cursor: pointer; }
   .formulario button:hover {
-    background-color: #ff8533; }
+    background-color: rgba(255, 96, 19, 0.8);
+    transition: background-color 400ms;
+    -webkit-transition: background-color 400ms; }
 
 #footer a {
   display: inline-block;
-  margin-left: 90%; }
+  margin-left: 85%; }
 
 /* RESPONSIVE */
 @media (max-width: 1250px) {
@@ -216,19 +218,16 @@ a {
 @media (max-width: 1000px) {
   #skills .logos {
     width: 50%;
-    padding: 10px; }
-
-  .top-nav {
-    left: 40%; } }
+    padding: 10px; } }
 @media (max-width: 800px) {
   .top-right {
-    display: none; }
-
-  .top-nav {
-    left: 20%; } }
+    display: none; } }
 @media (max-width: 600px) {
-  .top-nav {
-    left: 15%; }
+  .top-nav li {
+    font-size: 14px;
+    padding: 0 0px;
+    margin-right: 3px;
+    margin-top: 1px; }
 
   #skills .logos {
     width: 100%; }
@@ -244,15 +243,10 @@ a {
     float: none;
     width: auto; } }
 @media (max-width: 500px) {
-  .top-nav {
-    left: 10%; }
-    .top-nav li {
-      font-size: 13px;
-      padding: 0 0px;
-      margin-right: 3px;
-      margin-top: 4px; }
-      .top-nav li a {
-        padding: 3px 5px; }
+  .top-nav li {
+    margin-right: 1px; }
+    .top-nav li a {
+      padding: 0px 2px; }
 
   .top-left {
     float: none;
@@ -279,19 +273,17 @@ a {
   p {
     font-size: 14px; }
 
-  #foores a {
+  #footer a {
     margin-left: 45%;
     padding-top: 30px; } }
 @media (max-width: 350px) {
-  .top-nav {
-    left: 5%; }
-    .top-nav li {
-      font-size: 11px;
-      padding: 0 0px;
-      margin-right: 1px;
-      margin-top: 4px; }
-      .top-nav li a {
-        padding: 2px 5px; }
+  .top-nav li {
+    font-size: 11px;
+    padding: 0 0px;
+    margin-right: 1px;
+    margin-top: 4px; }
+    .top-nav li a {
+      padding: 2px 5px; }
 
   .top-left h3 {
     font-size: 15px; }
@@ -313,7 +305,7 @@ a {
     height: 40px;
     font-size: 12px; }
 
-  #foores a {
+  #footer a {
     font-size: 10px; }
 
   .top-left, #sobre-mi, #skills, #educacion, #footer {

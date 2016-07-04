@@ -8,10 +8,12 @@ $base-background: rgba(191, 191, 191, 0.2);
 $base-text-shadow: 2px 2px 4px black;
 
 
+
+
 @mixin formulario{
     width: 50%;
     float: left;
-    input{
+    input, textarea{
     	display: block;
     	margin: auto;
     	margin-bottom: 20px;
@@ -82,6 +84,7 @@ a{
 
 	&:hover{
     color: $base-secondary-color;
+	// transition: background-color 400ms;
 	}
 }
 
@@ -103,7 +106,7 @@ a{
     background-color: $base-background ;
 }
 .bg-nav-fondo{
-	background-color:  rgba(202, 211, 176, 0.7);
+	background-color: white;
 	height: 40px;
 	width: 100%;
 	z-index: 50;
@@ -115,15 +118,12 @@ a{
 	width: 100%;
 	position: fixed;
 	top: 0px;
-	z-index: 50;
+	z-index: 60;
 }
 
 .top-nav{
-	position: fixed;
-	top: 10px;
-	left: 50%;
-	z-index: 100;
-
+	float: right;
+	margin-top: 12px;
 	li{
 		float: left;
 		padding: 0 0px;
@@ -135,7 +135,10 @@ a{
 		padding: 5px 10px;
 
 	&:hover{
+
 		background-color: $base-secondary-color;
+		transition: background-color 400ms;
+		-webkit-transition: background-color 400ms;
 	}
 	}
 	}
@@ -228,19 +231,19 @@ a{
 #left{ @include formulario }
 
 #right{ @include formulario;
-	input{
+	textarea{
 		height: 160px;
-		padding-bottom: 85px;
+		padding-top: 25px;
     }
 }
 
 .formulario button{
 	border: none;
-	border-bottom: 4px solid  #ff8533 !important;
+	border-bottom: 4px solid  $base-secondary-color !important;
 	display: block;
 	margin: auto;
     border: none;
-    background-color: $base-secondary-color;
+    background-color: #ff8533;
     width: 20%;
     height: 50px;
     color: $base-principal-color;
@@ -249,14 +252,15 @@ a{
     text-transform: uppercase;
 	cursor: pointer;
 		&:hover{
-		background-color: #ff8533;
+		background-color:$base-secondary-color ;
+		transition: background-color 400ms;
+		-webkit-transition: background-color 400ms;
 	}
 }
 
 #footer a{
     display: inline-block;
-	margin-left: 90%;
-
+	margin-left: 85%;
 }
 
 /* RESPONSIVE */
@@ -274,23 +278,22 @@ a{
 		padding: 10px;
     }
     }
-	.top-nav{
-		left: 40%;
-	}
 }
 
 @media(max-width:800px){
     .top-right{
     	display: none;
     }
-	.top-nav{
-		left: 20%;
-	}
 }
 
 @media(max-width:600px){
 	.top-nav{
-		left: 15%;
+		li{
+			font-size: 14px;
+			padding: 0 0px;
+			margin-right: 3px;
+			margin-top: 1px;
+		}
 	}
 
 	#skills{
@@ -317,18 +320,14 @@ a{
 @media (max-width:500px) {
 
 	.top-nav{
-		left: 10%;
 		li{
-			font-size: 13px;
-			padding: 0 0px;
-			margin-right: 3px;
-			margin-top: 4px;
 
-		a{
-			padding: 3px 5px;
-		}
-		}
 
+			margin-right: 1px;
+			a{
+				padding: 0px 2px;
+			}
+		}
 	}
 
 	.top-left{
@@ -368,7 +367,7 @@ a{
 		font-size: 14px;
     }
 
-    #foores a{
+    #footer a{
 		margin-left: 45%;
 		padding-top: 30px;
     }
@@ -376,7 +375,6 @@ a{
 
 @media (max-width:350px) {
 	.top-nav{
-		left: 5%;
 		li{
 			font-size: 11px;
 			padding: 0 0px;
@@ -415,7 +413,7 @@ a{
 		font-size: 12px;
 	}
 
-	#foores a{
+	#footer a{
 		font-size: 10px;
 	}
 
