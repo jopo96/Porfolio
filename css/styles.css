@@ -43,9 +43,8 @@ p {
 a {
   text-decoration: none;
   color: white; }
-
-a:hover {
-  color: rgba(255, 96, 19, 0.8); }
+  a:hover {
+    color: rgba(255, 96, 19, 0.8); }
 
 .container {
   max-width: 1200px;
@@ -60,6 +59,37 @@ a:hover {
 
 .main-header {
   background-color: rgba(191, 191, 191, 0.2); }
+
+.bg-nav-fondo {
+  background-color: rgba(202, 211, 176, 0.7);
+  height: 40px;
+  width: 100%;
+  z-index: 50; }
+
+.bg-nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 5px black;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 50; }
+
+.top-nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 100; }
+  .top-nav li {
+    float: left;
+    padding: 0 0px;
+    margin-right: 5px;
+    border: none; }
+    .top-nav li a {
+      color: white;
+      padding: 5px 10px; }
+      .top-nav li a:hover {
+        background-color: rgba(255, 96, 19, 0.8); }
 
 .top-left {
   float: left;
@@ -86,41 +116,41 @@ a:hover {
   font-weight: 400;
   text-shadow: none; }
 
-.sobre-mi {
+#sobre-mi {
   margin: auto;
   padding: 100px 0px; }
-  .sobre-mi p {
+  #sobre-mi p {
     text-align: justify; }
 
 .bg-center {
   background: url(../images/bg-02.jpg) center top no-repeat fixed;
   background-size: cover; }
 
-.skills {
+#skills {
   background-color: rgba(191, 191, 191, 0.2);
   padding: 100px 0px;
   margin: auto; }
-  .skills .logos {
+  #skills .logos {
     width: 25%;
     float: left;
     text-align: center; }
 
-.educacion {
+#educacion {
   padding: 100px 0px; }
-  .educacion h4 {
+  #educacion h4 {
     padding-left: 30px; }
-  .educacion img {
+  #educacion img {
     float: left;
     position: relative;
     top: 10px; }
-  .educacion p {
+  #educacion p {
     padding-left: 60px; }
 
 .bg-bottom {
   background: url(../images/bg-03.jpg) center top no-repeat fixed;
   background-size: cover; }
 
-.footer {
+#footer {
   background-color: rgba(191, 191, 191, 0.2);
   padding: 100px 0px; }
 
@@ -159,6 +189,8 @@ a:hover {
     padding-bottom: 85px; }
 
 .formulario button {
+  border: none;
+  border-bottom: 4px solid  #ff8533 !important;
   display: block;
   margin: auto;
   border: none;
@@ -168,28 +200,40 @@ a:hover {
   color: white;
   font-family: inherit;
   font-size: 16px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
+  .formulario button:hover {
+    background-color: #ff8533; }
 
-.footer a {
-  display: block;
-  text-align: right; }
+#footer a {
+  display: inline-block;
+  margin-left: 90%; }
 
 /* RESPONSIVE */
 @media (max-width: 1250px) {
   .container {
     width: 95%; } }
 @media (max-width: 1000px) {
-  .skills .logos {
+  #skills .logos {
     width: 50%;
-    padding: 10px; } }
+    padding: 10px; }
+
+  .top-nav {
+    left: 40%; } }
 @media (max-width: 800px) {
   .top-right {
-    display: none; } }
+    display: none; }
+
+  .top-nav {
+    left: 20%; } }
 @media (max-width: 600px) {
-  .skills .logos {
+  .top-nav {
+    left: 15%; }
+
+  #skills .logos {
     width: 100%; }
 
-  .top-left, .sobre-mi, .skills, .educacion, .footer {
+  .top-left, #sobre-mi, #skills, #educacion, #footer {
     padding: 50px 0px; }
 
   #left {
@@ -200,6 +244,16 @@ a:hover {
     float: none;
     width: auto; } }
 @media (max-width: 500px) {
+  .top-nav {
+    left: 10%; }
+    .top-nav li {
+      font-size: 13px;
+      padding: 0 0px;
+      margin-right: 3px;
+      margin-top: 4px; }
+      .top-nav li a {
+        padding: 3px 5px; }
+
   .top-left {
     float: none;
     text-align: center; }
@@ -219,16 +273,26 @@ a:hover {
   h4 {
     font-size: 18px; }
 
-  .educacion h4 {
+  #educacion h4 {
     padding-left: 60px; }
 
   p {
     font-size: 14px; }
 
-  .footer a {
-    text-align: center;
+  #foores a {
+    margin-left: 45%;
     padding-top: 30px; } }
 @media (max-width: 350px) {
+  .top-nav {
+    left: 5%; }
+    .top-nav li {
+      font-size: 11px;
+      padding: 0 0px;
+      margin-right: 1px;
+      margin-top: 4px; }
+      .top-nav li a {
+        padding: 2px 5px; }
+
   .top-left h3 {
     font-size: 15px; }
 
@@ -249,10 +313,10 @@ a:hover {
     height: 40px;
     font-size: 12px; }
 
-  .footer a {
+  #foores a {
     font-size: 10px; }
 
-  .top-left, .sobre-mi, .skills, .educacion, .footer {
+  .top-left, #sobre-mi, #skills, #educacion, #footer {
     padding: 30px 0px; } }
 
 /*# sourceMappingURL=styles.css.map */
