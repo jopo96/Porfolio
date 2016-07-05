@@ -84,7 +84,8 @@ a{
 
 	&:hover{
     color: $base-secondary-color;
-	// transition: background-color 400ms;
+	-webkit-transition: color 400ms;
+	transition: color 400ms;
 	}
 }
 
@@ -131,11 +132,11 @@ a{
 		border: none;
 
 	a{
-		color: $base-principal-color;
+		// color: $base-principal-color;
 		padding: 5px 10px;
 
 	&:hover{
-
+		color: $base-principal-color;
 		background-color: $base-secondary-color;
 		transition: background-color 400ms;
 		-webkit-transition: background-color 400ms;
@@ -243,24 +244,29 @@ a{
 	display: block;
 	margin: auto;
     border: none;
-    background-color: #ff8533;
+    background-color: $base-secondary-color;
     width: 20%;
     height: 50px;
     color: $base-principal-color;
     font-family: inherit;
     font-size: 16px;
     text-transform: uppercase;
+	text-shadow: $base-text-shadow;
 	cursor: pointer;
 		&:hover{
-		background-color:$base-secondary-color ;
-		transition: background-color 400ms;
+		background-color:rgba(255, 96, 19, 1) ;
+		transition: background-color 400ms ;
 		-webkit-transition: background-color 400ms;
 	}
 }
 
+
 #footer a{
     display: inline-block;
-	margin-left: 85%;
+	margin-left: 89%;
+	a:hover{
+		color: $base-secondary-color;
+	}
 }
 
 /* RESPONSIVE */
